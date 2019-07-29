@@ -1,0 +1,21 @@
+/* 组件样式在 组件嵌入页面时候会失效 */
+
+/* 书籍渲染列表 */
+.good-item {
+  display: inline-block;
+  width: 322rpx;
+  height: 450rpx;
+  margin: 25rpx;
+}
+.good-item .book-img {
+  width: 100%;
+  height: 300rpx;
+}
+/* 底部的 价格、付款人数、更多小图标 */
+.price-sale-more .sale-num {
+  margin-left: 20rpx;
+}
+.price-sale-more > .more-icon {
+  width: 50rpx;
+  height: 50rpx;
+}

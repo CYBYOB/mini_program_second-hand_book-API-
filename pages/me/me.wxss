@@ -1,0 +1,30 @@
+/* pages/me/me.wxss */
+
+/* 顶部的用户信息 */
+.top-info {
+  height: 350rpx;
+}
+.user-info {
+  text-align: center;
+  padding-top: 50rpx;
+}
+.user-info > .avatar-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+}
+.user-info > .nick-name, .point {
+  color: #fff;
+}
+
+
+/* 我的订单、收货地址、我的收藏 */
+.my-item {
+  display: flex;
+  align-items: center;
+}
+.my-item .front-icon {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 25rpx;
+}

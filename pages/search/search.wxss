@@ -1,0 +1,35 @@
+/* pages/search/search.wxss */
+
+/* 历史记录 */
+.history-title > .delete-icon {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+/* 搜索历史的列表 */
+.history-list > .history-item {
+  display: inline-block;
+  padding: 10rpx 20rpx;
+  margin: 10rpx;
+  border-radius: 50rpx;
+  color: #707070;
+  background-color: #E4E4E4;
+}
+
+/* 展开更多的小图标 */
+.expand-more {
+  width: 50rpx;
+  height: 30rpx;
+  margin-left: 50%;
+}
+
+/* “悬浮的”logo */
+.logo {
+  text-align: center;
+}
+.logo .logo-icon {
+  width: 350rpx;
+  height: 200rpx;
+  margin-top: 150rpx;
+}

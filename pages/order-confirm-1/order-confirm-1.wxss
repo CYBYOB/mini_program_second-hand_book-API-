@@ -1,0 +1,102 @@
+/* pages/order-confirm/order-confirm.wxss */
+
+/* 当前页面公共样式 */
+/* 高度均为 100rpx */
+.num-of-buy,.way-of-delivery,.subtotal {
+  height: 100rpx;
+}
+
+/* 顶部的收货相关信息 */
+.top-info {
+  display: flex;
+  align-items: center;
+}
+.top-info > .address-icon {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 50rpx;
+}
+/* 尽量少用标签选择器，这里就用了一次，其他地方基本没有 */
+.delivery-info input {
+  display: inline-block;
+}
+
+/* 下面的订单信息 */
+.order-info {
+  margin: 25rpx;
+}
+/* 物品之间有间隔,除了最后一个 外 */
+.good:not(:last-child) {
+  margin-bottom: 30rpx;
+}
+.order-info .good-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25rpx;
+}
+.good-item > .good-img {
+  width: 250rpx;
+  height: 250rpx;
+  margin-right: 25rpx;
+}
+/* 右部的内容 */
+.right-info {
+  flex: 1;
+}
+.right-info > .title {
+  margin-bottom: 130rpx;
+}
+
+
+/* 购买数量 */
+.num-of-buy {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+.minus-num-add {
+  margin-left: auto
+}
+.minus-num-add .minus,.add {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  /* line-height: 100%; */
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #eee;
+}
+.minus-num-add .num {
+  margin: 0 10rpx;
+}
+
+/* 配送方式 */
+.way-of-delivery {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/* 买家留言 */
+.buyer-msg {
+  padding: 25rpx 0;
+}
+.buyer-msg input {
+  /* 缩进2个字 */
+  text-indent: 2em;
+}
+
+/* 直接不用小计了，直接合计 */
+.total {
+  /* 应该让用户 浏览一遍所有信息，才能 提交订单、不易出错！！ */
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.total > .commit-btn {
+  margin-right: 0;
+  color: #fff;
+  background: linear-gradient(to right, #FFCC00, #FF9500)
+}

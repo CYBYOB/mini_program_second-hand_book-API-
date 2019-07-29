@@ -1,0 +1,18 @@
+<!--components/good-list.wxml-->
+<view>
+  <!-- 书籍渲染列表 -->
+  <view class='good-list'>
+    <block wx:for='{{goodList}}'>
+      <view id='{{item.id}}' class='good-item' bindtap='redirectToGoodDetail'>
+        <image class='book-img' src="{{'https://www.520cyb.cn/mini/book_shop/good/'+item.src}}"></image>
+        <view>{{item.name}}</view>
+        <view class='price-sale-more'>
+          <text class='now_price'>￥{{item.now_price}}</text><text class='sale-num'>{{item.sale_num}}人付款</text>
+          <image class='more-icon' src='../../images/index/more.png'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+

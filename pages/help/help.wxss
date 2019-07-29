@@ -1,0 +1,12 @@
+/* pages/help/help.wxss */
+
+/* 帮助 */
+.help-item {
+  text-indent: 2em;
+  padding: 20rpx 10rpx;
+  margin: 25rpx;
+}
+.help-item .question {
+  margin-bottom: 15rpx;
+  color: #ff9500;
+}

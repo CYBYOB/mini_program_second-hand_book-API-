@@ -1,0 +1,20 @@
+<!--components/search/search.wxml-->
+<view>
+  <view class='search main-content'>
+    <icon class='search-icon' type='search' size='30rpx'></icon>
+    <input class='input-kw' placeholder='请输入关键字' bindinput='inputKeyword' bindconfirm='confirmByKeyword'></input>
+    <button class='search-btn' bindtap='confirmByKeyword'>搜索</button>
+  </view>
+
+  <!-- 快人一步,捷径、传送门。只有当前输入关键词不为空才会出现、才能点击提交跳转 -->
+    <view class='shortcut' hidden="{{keyword === ''? true : false }}">
+      <view class='keyword-list'>
+        <block wx:for='{{keywordList}}'>
+          <view class='keyword-item' data-keyword='{{item}}' bindtap='confirmByShortcut'>
+            {{item}}
+            <image class='enter-icon' src='/images/search/enter.png'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+</view>

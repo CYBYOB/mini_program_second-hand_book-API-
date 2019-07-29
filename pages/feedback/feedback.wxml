@@ -1,0 +1,32 @@
+<!--pages/feedback/feedback.wxml-->
+<view>
+  <view class='feedback'>
+    <view class='main-content'>
+      <view class='type'>
+        请选择提交的问题类型：
+        <picker class='border-all' range='{{type.range}}' value='{{type.index}}' bindchange='changeType'>
+          {{type.range[type.index]}}
+        </picker>
+      </view>
+      <!-- 问题描述或建议、意见 -->
+      <view class='content'>
+        <input placeholder='请输入遇到的问题BUG或者建议、意见' bindinput='inputContent'></input>
+      </view>
+
+      <!-- 图片与说明。后续版本再加入 -->
+      <view class='pic-desc'>
+        <image src='/images/feedback/add.png' bindtap='clickPicDesc'></image>
+        <view class='desc' bindtap='clickPicDesc'>添加图片说明</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 联系电话 -->
+  <view class='contact border-all'>
+    <view>联系电话</view>
+    <input placeholder='选填，便于联系、抽奖等' type='number' bindinput='inputPhone'></input>
+  </view>
+
+  <!-- 提交按钮 -->
+  <view class='commit-btn' bindtap='clickCommit'>提交</view>
+</view>

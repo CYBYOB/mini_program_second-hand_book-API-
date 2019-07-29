@@ -1,0 +1,8 @@
+<!--pages/cyb/cyb.wxml-->
+<view>
+  <view class='page-list'>
+    <block wx:for='{{pageList}}'>
+      <view id='{{item.name}}' class='page-item border-all' bindtap='navigateToPage'>{{item.name}}</view>
+    </block>
+  </view>
+</view>

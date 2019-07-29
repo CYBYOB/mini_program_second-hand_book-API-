@@ -1,0 +1,7 @@
+/* pages/search-result/search-result.wxss */
+
+/* 下面的 排序 —— 销量、价格 */
+.sort-sale-price {
+  display: flex;
+  justify-content: space-around
+}

@@ -1,0 +1,91 @@
+/* pages/my-collect/my-collect.wxss */
+
+/* 当前页面的公共样式 */
+.select-icon {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 4rpx #eee solid;
+  border-radius: 50%;
+  color: #fff;
+  /* 点击进行 背景色的切换,显示当前选中与否 */
+  background-color: #fff;
+}
+
+
+/* 顶部的收藏列表 */
+.collect-item {
+  display: flex;
+  align-items: center;
+  padding: 25rpx;
+}
+
+/* 点击进行 背景色的切换,显示当前选中与否 */
+/* .collect-item > .select-icon {
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  border: 3rpx #eee solid;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #ff9500;
+} */
+.collect-item .good-img {
+  width: 150rpx;
+  height: 150rpx;
+  padding: 25rpx;
+}
+
+/* 右部信息，书名、价格、收藏数量等 */
+.collect-item > .right-info {
+  flex: 1;
+}
+.right-info > .name {
+  margin-bottom: 60rpx;
+}
+.minus-num-add .minus,.add {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  /* line-height: 100%; */
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #eee;
+}
+.minus-num-add .num {
+  margin: 0 10rpx;
+}
+
+/* 下面的删除按钮（删除当前选中的） */
+.delete-btn {
+  height: 100rpx;
+  /* margin底部应该大一些，不然可能会存在遮挡问题 */
+  margin: 50rpx 0 150rpx 0;
+  color: #FB4E4E;
+  background-color: #fff;
+}
+
+/* 固定在底部的内容（全选、合计、立即购买等） */
+.fixed-buttom {
+  position: fixed;
+  /* 必须设置宽为 100% ，铺满 */
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+.fixed-buttom > .select-icon {
+  margin: 0 25rpx;
+}
+.fixed-buttom > .total {
+  margin-left: auto
+}
+/* 立刻购买 */
+.fixed-buttom > .buy-now {
+  padding: 30rpx 20rpx;
+  margin-left: auto;
+  color: #fff;
+  background: linear-gradient(to right, #FFCC00, #FF9500)
+}

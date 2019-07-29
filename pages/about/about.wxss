@@ -1,0 +1,12 @@
+/* pages/about/about.wxss */
+
+/* 关于 */
+.about-item {
+  text-indent: 2em;
+  padding: 20rpx 10rpx;
+  margin: 25rpx;
+}
+.about-item .title {
+  margin-bottom: 15rpx;
+  color: #ff9500;
+}

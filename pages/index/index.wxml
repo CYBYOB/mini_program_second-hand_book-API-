@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<view> 
+  <!-- 顶部搜索栏 -->
+  <view class='top-search main-color-bg'>
+    <view class='search border-all' bindtap='searchByKeyword'>
+      <icon type='search' size='50rpx'></icon>
+      <input class='input' placeholder='搜索'></input>
+    </view>
+  </view>
+
+  <!-- 轮播图（作为 线上线下 O2O 用的） -->
+  <view class='carousel'>
+    <swiper indicator-dots='true' autoplay='true' interval='1000' circular='true' >
+      <block wx:for='{{carouselList}}'> 
+        <swiper-item> 
+          <image class='carousel-img' id='{{item.id}}' src='{{item.src}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 学院分类 -->
+  <view class='academy'>
+    <block wx:for='{{academyList}}'>
+      <view id='{{item.id}}' class='academy-item' bindtap='searchByAcademyId'>
+        <!-- “文字图标” -->
+        <view class='text-icon'><text class='title'>{{item.title}}</text></view>
+        <view class='name'>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 近期热销书籍 -->
+  <view class='hot-sale'>
+    <view>近期热销书籍</view>
+    <!-- <image class='next-more-img' src='../../images/index/next-more.png'></image> -->
+  </view>
+
+  <!-- 近期热销书籍渲染列表 -->
+  <good-list goodList='{{hotSaleList}}'>
+  </good-list>
+</view>

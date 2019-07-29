@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "search": "/components/search/search",
+    "good-list": "/components/good-list/good-list"
+  },
+  "navigationBarTitleText": "搜索结果"
+}

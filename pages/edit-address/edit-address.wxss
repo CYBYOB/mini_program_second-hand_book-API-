@@ -1,0 +1,52 @@
+/* pages/edit-address/edit-address.wxss */
+
+/* 公共样式，浅颜色字体 */
+.light-text {
+  color: #999;
+}
+/* input 输入内容过多就展开 */
+.name,.phone,.address > input {
+  flex: 1;
+}
+
+/* 顶部的收货信息 */
+.top-info {
+  padding: 0 25rpx;
+}
+.top-info  > .name,.phone,.address {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 3rpx #eee solid;
+}
+
+/*  设为默认 和 删除地址 */
+.default-delete {
+  padding: 0 25rpx;
+  margin-top: 50rpx;
+}
+.default {
+  display: flex;
+  padding: 20rpx 0;
+}
+.default > .switch {
+  margin-left: auto;
+}
+
+/* 删除当前地址的按钮 */
+.delete-btn {
+  color: #FB4E4E;
+}
+
+
+/*  */
+.save {
+  display: flex;
+  justify-content: center;
+}
+.save-change-btn {
+  position: fixed;
+  width: 300rpx;
+  bottom: 0;
+  border-radius: 50rpx;
+  background: linear-gradient(to right, #FFCC00, #FF9500)
+}

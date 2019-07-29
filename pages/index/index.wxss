@@ -1,0 +1,103 @@
+/* pages/index/index.wxss */
+
+@import "/styles/good-list.wxss";
+
+/* 顶部搜索栏 */
+.top-search {
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  width: 600rpx;
+  height: 50rpx;
+  background-color: #E4E4E4;
+}
+.search icon {
+  margin: 0 15rpx;
+}
+.search .input {
+  display: inline-block;
+}
+
+/* 轮播图（作为 O2O 用的） */
+.carousel .carousel-img {
+  width: 100%;
+}
+
+/* 学院分类 */
+.academy .academy-item {
+  display: inline-block;
+  width: 150rpx;
+  height: 200rpx;
+  text-align: center;
+  margin: 19rpx;
+}
+.academy-item .text-icon {
+  height: 150rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #eee;
+}
+.text-icon .title {
+  line-height: 150rpx;
+  font-weight: 600;
+}
+
+/* 近期热销书籍 */
+.hot-sale {
+  display: flex;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #FF9500, #FF9601)
+}
+.hot-sale .next-more-img {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+/* 近期热销书籍渲染列表 */
+.hot-sale-item {
+  display: inline-block;
+  width: 322rpx;
+  height: 450rpx;
+  margin: 25rpx;
+}
+.hot-sale-item .book-img {
+  width: 100%;
+  height: 300rpx;
+}
+/* 底部的 价格、付款人数、更多小图标 */
+.price-sale-more .sale-num {
+  margin-left: 20rpx;
+}
+.price-sale-more > .more-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+
+
+/* 书籍渲染列表 */
+.good-item {
+  display: inline-block;
+  width: 322rpx;
+  height: 450rpx;
+  margin: 25rpx;
+}
+.good-item .book-img {
+  width: 100%;
+  height: 300rpx;
+}
+/* 底部的 价格、付款人数、更多小图标 */
+.price-sale-more .sale-num {
+  margin-left: 20rpx;
+}
+.price-sale-more > .more-icon {
+  width: 50rpx;
+  height: 50rpx;
+}

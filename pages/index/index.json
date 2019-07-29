@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "good-list": "/components/good-list/good-list"
+  },
+  "navigationBarTitleText": "首页"
+}

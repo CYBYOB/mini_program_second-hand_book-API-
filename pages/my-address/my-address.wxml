@@ -1,0 +1,21 @@
+<!--pages/my-address/my-address.wxml-->
+<view>
+  <!-- 收货地址 -->
+  <view class='address-list'>
+    <block wx:for='{{addressList}}'>
+      <view class='address-item border-bottom'>
+        <view class='index'>{{index+1}}</view>
+        <!-- 中间的收货信息 -->
+        <view class='mid-info'>
+          <view class='name-phone'><text class='name'>{{item.name}}</text><text>{{item.phone}}</text></view>
+          <view class='address'>{{item.address}}</view>
+        </view>
+        <!-- 编辑“按钮” -->
+        <view class='edit border-left' data-delivery='{ "name":"{{item.name}}", "phone":{{item.phone}}, "address": "{{item.address}}" }' bindtap='editCurrentAddress'>编辑</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 新增按钮 -->
+  <button class='add-btn' bindtap='addNewAddress'>新增</button>
+</view>

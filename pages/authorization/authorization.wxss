@@ -1,0 +1,27 @@
+/* pages/authorization/authorization.wxss */
+
+/* 顶部logo */
+.logo {
+  text-align: center;
+  margin: 220rpx 0 50rpx;
+}
+.logo image {
+  width: 350rpx;
+  height: 150rpx;
+}
+
+/* 授权 */
+.authorization {
+  text-align: center;
+}
+.authorization .tip {
+  width: 600rpx;
+  padding-top: 15rpx; 
+  margin: 30rpx 75rpx 100rpx;
+}
+.authorization .authorization-btn {
+  width: 200rpx;
+  padding: 0 20rpx;
+  color: #fff;
+  background-color: #ff9500;
+}

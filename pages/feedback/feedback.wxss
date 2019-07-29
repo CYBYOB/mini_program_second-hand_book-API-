@@ -1,0 +1,62 @@
+/* pages/feedback/feedback.wxss */
+
+/* 该页面的公共样式 */
+.feedback .type,.content,.pic-desc {
+  padding: 20rpx 0;
+}
+
+
+/* 提交问题的类型选择 */
+.feedback {
+  border-top: 3rpx solid #eee;
+  border-bottom: 3rpx solid #eee;
+  margin-top: 30rpx;
+}
+.feedback .type {
+  display: flex;
+}
+.type > picker {
+  color: #ff9500;
+  padding: 0 20rpx;
+}
+
+/* 图片与说明 */
+.pic-desc {
+  display: flex;
+  align-items: center;
+}
+
+.pic-desc > image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.pic-desc .desc {
+  margin-left: auto;
+  color: #999;
+}
+
+/* 联系电话 */
+.contact {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  padding: 0 25rpx;
+  margin: 30rpx 0 100rpx;
+}
+.contact > input {
+  /* flex: 1; */
+  margin-left: auto;
+}
+
+/* 提交按钮 */
+.commit-btn {
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  background-color: #ff9500;
+}

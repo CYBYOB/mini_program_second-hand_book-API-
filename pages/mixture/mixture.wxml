@@ -1,0 +1,68 @@
+<!--pages/mixture/mixture.wxml-->
+<view>  
+  <!-- 活动与礼包 -->
+  <view class='activity-pack'>  
+    <!-- 顶部的礼包与活动，点击进行相关的 ”视图切换”，默认 为 活动的视图 -->
+    <view class='activity-pack-switch'>
+      <view class="activity border-all {{isActivityShow? 'selected':''}}" data-status='activity' bindtap='changeActivityShowState'>活动</view>
+      <view class="pack border-all {{isActivityShow? '':'selected'}}" data-status='pack' bindtap='changeActivityShowState'>礼包</view>
+    </view>
+
+    <!-- 主体内容,其实 活动、礼包图文列表可以抽象成一个组件！！ -->
+    <view class='main-content'>
+      <view hidden='{{!isActivityShow}}'>
+        <!-- 活动图文列表 -->
+        <view class='activity-list list'>
+          <block wx:for='{{activityList}}'>
+            <view class='activity-item item'>
+              <image class='pictrue' src='{{item.src}}'></image>
+              <view class='title'>{{item.title}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view hidden='{{isActivityShow}}'>
+        <!-- 筛选的图标，固定在页面的 右上角附近 -->
+        <view class='filter' bindtap='clickFilter'>
+          <image class='filter-icon' src='../../images/mixture/filter.png'></image>
+          <view class='title'>筛选</view>
+        </view>
+        <!-- 点击筛选后跳出来的选择框 -->
+        <view class='filter-frame' hidden='{{!isClickFilter}}'>
+          <view class='three-filter'>
+            <block wx:for='{{filterList}}' wx:for-index='outerIndex' wx:for-item='outerItem'>
+              <view class='filter-item'>
+                <!-- 学院、年级、学期 -->
+                <view>{{outerItem.title}}</view>
+                <view class='range'>
+                  <block wx:for='{{outerItem.range}}'>
+                    <view class="range-item {{outerItem.checked === index? 'item-selected' : ''}}" data-index="{{index}}" data-outeridx='{{outerIndex}}' bindtap='changeSelectedItem'>
+                      {{item}}
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <!-- 底部的 重置 与 确定 按钮 -->
+          <view class='reset-confirm'>
+            <button class='reset' bindtap='clickReset'>重置</button>
+            <button class='confirm' bindtap='clickConfirm'>确定</button>
+          </view>
+        </view>
+
+        <!-- 礼包图文列表 -->
+        <view class='pack-list list'>
+          <block wx:for='{{packList}}'>
+            <view class='pack-item item'>
+              <image class='pictrue' src='{{item.src}}'></image>
+              <view class='title'>{{item.title}}</view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

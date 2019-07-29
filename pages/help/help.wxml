@@ -1,0 +1,11 @@
+<!--pages/help/help.wxml-->
+<view>
+  <view class='help-list'>
+    <block wx:for='{{helpList}}' wx:for-index="index">
+      <view class='help-item border-all'>
+        <view class='question'>{{index+1}}、问：{{item.question}}</view>
+        <view class='answer'>答：{{item.answer}}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/edit-address/edit-address.wxml-->
+<view>
+  <!-- 顶部的收货信息 -->
+  <view class='top-info'>
+    <view class='name'><text class='light-text'>收货人：</text><input value='{{delivery.name}}' bindinput='inputName'></input></view>
+    <view class='phone'><text class='light-text'>收货电话：</text><input value='{{delivery.phone}}' bindinput='inputPhone'></input></view>
+    <view class='address'><text class='light-text'>收货地址：</text><input value='{{delivery.address}}' bindinput='inputAddress'></input></view>
+  </view>
+
+  <!-- 设为默认 和 删除地址 -->
+  <view class='default-delete'>
+    <view class='default border-all'>设为默认地址<switch class='switch fr' bindchange='changeSwitch'></switch></view>
+    <button class='delete-btn' bindtap='deleteCurrentAddress'>删除地址</button>
+  </view>
+
+  <!-- 保存设置 -->
+  <view class='save'>
+    <button class='save-change-btn' bindtap='save'>保存</button>
+  </view>
+</view>

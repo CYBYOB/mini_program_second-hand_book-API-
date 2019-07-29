@@ -1,0 +1,16 @@
+<!--pages/search-result/search-result.wxml-->
+<view>
+  <!-- 顶部的 搜索组件 -->
+  <search id='search' bind:myConfirmByKeyword='myConfirmByKeyword'>
+  </search>
+
+  <!-- 下面的 排序 —— 销量、价格 -->
+  <view class='sort-sale-price'>
+    <picker range='{{saleList.range}}' value='{{saleList.index}}' bindchange='sortChangeBySale'>{{saleList.range[saleList.index]}}</picker>
+    <picker range='{{priceList.range}}' value='{{priceList.index}}' bindchange='sortChangeByPrice'>{{priceList.range[priceList.index]}}</picker>
+  </view>
+
+  <!-- 商品的渲染列表 -->
+  <good-list goodList='{{searchResultList}}' bind:navigateToGoodDetail='navigateToGoodDetail'>
+  </good-list>
+</view>

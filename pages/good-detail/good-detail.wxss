@@ -1,0 +1,76 @@
+/* pages/good-detail/good-detail.wxss */
+
+/* 顶部的商品信息栏 */
+.top-good-info {
+  position: relative;
+}
+.top-good-info > .good-img {
+  width: 500rpx;
+  height: 500rpx;
+  padding: 0 125rpx;
+}
+.top-good-info > .collect {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+/* 原价 和 网销，小字体 */
+.price-sale > .pre-price,.sale-num {
+  font-size: 30rpx;
+}
+.price-sale > .pre-price {
+  margin: 0 25rpx;
+}
+.pre-price .line-through {
+  text-decoration: line-through;
+}
+
+/* 小公告 */
+.tip {
+  font-size: 40rpx;
+  color: #999;
+  margin: 30rpx 0;
+}
+
+/* 看看其他 */
+/* 下面的“看看其他” */
+.view-other {
+  text-align: center;
+}
+.view-other .line {
+  display: inline-block;
+  width: 150rpx;
+}
+.view-other .text-other {
+  vertical-align: -25%;
+  margin: 0 50rpx;
+}
+
+/* 微信、电话的 悬浮图标 */
+.phone-wechat {
+  position: fixed;
+  bottom: 180rpx;
+  right: 25rpx;
+  background-color: rgba(255, 255, 255, 0.8)
+}
+.phone-wechat .phone,.wechat {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 20rpx;
+}
+
+
+/* 底部固定的购买按钮 */
+.buy-btn {
+  position: fixed;
+  width: 404rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  border-radius: 45rpx;
+  background-color: #ff9500;
+}

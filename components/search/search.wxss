@@ -1,0 +1,46 @@
+/* components/search/search.wxss */
+
+/* 搜索组件 样式 */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 30rpx;
+}
+.search > .search-icon {
+  position: absolute;
+  left: 20rpx;
+}
+.search > .input-kw {
+  flex: 1;
+  padding-left: 60rpx;
+  border: 3rpx #eee solid;
+  border-radius: 20rpx;
+}
+.search > .search-btn {
+  height: 65rpx;
+  line-height: 65rpx;
+  color: #fff;
+  background: linear-gradient(to right, #FFCC00, #FF9500)
+}
+
+/* 快人一步,捷径、传送门 */
+.keyword-list {
+  position: fixed;
+  width: 750rpx;
+  background-color: #FFF;
+}
+.keyword-item {
+  display: flex;
+  height: 90rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 0 35rpx;
+  border-bottom: 3rpx solid #eee;
+} 
+
+.keyword-item > .enter-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: auto;
+}

@@ -1,0 +1,41 @@
+/* pages/my-order/my-order.wxss */
+
+.order-item {
+  margin: 0 25rpx;
+  /* padding: 0 25rpx;
+  margin: 0 25rpx; */
+}
+.good-info {
+  display: flex;
+  padding: 25rpx;
+}
+.good-info .good-img {
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+/* 右边的信息栏 */
+.good-info > .right-info {
+  flex: 1;
+}
+.right-info > .price-num {
+  /* 与顶部的 运输状态等 有距离 */
+  margin-top: 50rpx;
+}
+.price-num > .total-num {
+  margin-left: 25rpx;
+}
+
+/* 每个订单底部的 再来一单、催单、评价 */
+.bottom-3-btn {
+  display: flex;
+  padding: 25rpx;
+}
+/* 因为该页面的 button元素就只有这些，使用标签选择器影响不大，大页面中不应这么写！ */
+.bottom-3-btn > button {
+  border-radius: 20%;
+  background-color: #fff;
+}
+.bottom-3-btn > button:first-child {
+  margin-left: auto
+}

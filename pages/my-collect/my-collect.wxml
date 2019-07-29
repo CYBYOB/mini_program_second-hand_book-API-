@@ -1,0 +1,40 @@
+<!--pages/my-collect/my-collect.wxml-->
+<view>
+  <!-- 顶部的收藏列表 -->
+  <view class='collect-list'>
+    <block wx:for='{{collectList}}' wx:for-index="index">
+      <view class='collect-item border-bottom'>
+        <!-- 当前是否选中的小图标 -->
+        <view class='select-icon' style="background-color:{{selectedList[index]? '#ff9500': '#fff'}}" data-index='{{index}}' bindtap='clickSelectIcon'>√</view>
+        <image class='good-img' src="{{'https://www.520cyb.cn/mini/book_shop/good/'+item.src}}"></image>
+        <!-- 右部信息，书名、价格、收藏数量等 -->
+        <view class='right-info'>
+          <view class='name'>{{item.name}}</view>
+          <view class='price-num'>
+            <text class='main-color-text'>￥{{item.now_price}}</text>
+            <!-- 有右浮动 -->
+            <view class='minus-num-add fr'>
+              <text class='minus' data-index='{{index}}' bindtap='clickMinus'>-</text>
+              <text class='num'>{{item.good_num}}</text>
+              <text class='add' data-index='{{index}}' bindtap='clickAdd'>+</text>
+            </view>
+            <view class='clear'></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 下面的删除按钮（删除当前选中的） -->
+  <button class='delete-btn' bindtap='clickDelete'>删除</button>
+
+  <!-- 固定在底部的内容（全选、合计、立即购买等） -->
+  <view class='fixed-buttom border-all'>
+    <!-- 当前是否选中的小图标 -->
+    <view class='select-icon' style="background-color:{{otherInfo.isAllSelect? '#ff9500': '#fff'}}" bindtap='clickAllSelect'>√</view>
+    <text class='all-select' bindtap='clickAllSelect'>全选</text>
+    <view class='total'>合计：<text class='main-color-text'>￥{{otherInfo.totalPrice}}</text></view>
+    <!-- flex布局无法使用 浮动，应该使用 margin-left 或者  margin-right ，然后设置为 auto -->
+    <view class='buy-now' bindtap='clickBuy'>立即购买</view>
+  </view>
+</view>

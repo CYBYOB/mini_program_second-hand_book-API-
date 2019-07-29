@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<view>
+  <!-- 顶部搜索框，用组件去实现 -->
+  <search bind:myConfirmByKeyword='myConfirmByKeyword'>
+  </search>
+  <!-- 搜索的历史记录，应该放入 数据库 或者 storage 进行持久化 -->
+  <view class='history main-content'>
+    <view class='history-title'>
+      <text class='text'>历史记录</text>
+      <image class='delete-icon fr' src='../../images/search/history-delete.png' bindtap='clearSearchOfHistory'></image>
+    </view>
+    <!-- 搜索历史的列表 -->
+    <view class='history-list'>
+      <block wx:for='{{historyList}}'>
+        <view id='{{item.id}}' class='history-item' bindtap='confirmByhistoryItem'>
+          {{item.name}}
+        </view>
+      </block>
+    </view>
+    <!-- 展开更多的图标 -->
+    <image class='expand-more' src='../../images/search/expand-more.png'></image>
+  </view>
+
+  <!-- “悬浮的”logo -->
+  <view class='logo'>
+    <image class='logo-icon' src='../../images/search/logo.png'></image>
+  </view>
+</view>

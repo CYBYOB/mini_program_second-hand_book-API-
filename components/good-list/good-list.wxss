@@ -1,0 +1,32 @@
+/* components/good-list.wxss */
+
+/* 书籍渲染列表 */
+.good-item {
+  display: inline-block;
+  width: 322rpx;
+  margin: 25rpx;
+  border: 3rpx solid #eee;
+}
+.good-item .book-img {
+  width: 300rpx;
+  height: 300rpx;
+}
+/* 底部的 价格、付款人数、更多小图标 */
+.price-sale-more {
+  display: flex;
+  align-items: center;
+}
+.price-sale-more .now_price {
+  color: #ff9500;
+}
+.price-sale-more .sale-num {
+  margin-left: 20rpx;
+  font-size: 27rpx;
+  font-weight: 500;
+  color: #666;
+}
+.price-sale-more > .more-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: auto;
+}

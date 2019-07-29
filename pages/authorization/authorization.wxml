@@ -1,0 +1,15 @@
+<!--pages/authorization/authorization.wxml-->
+<view>
+  <!-- 顶部的 logo图标 -->
+  <view class='logo'>
+    <image src='../../images/authorization/logo.png'></image>
+  </view>
+  
+  <!-- 授权 -->
+  <view class='authorization'>
+    <view class='tip border-top'>昨日在耳在线商场申请获得微信授权</view>
+    <button class='authorization-btn' wx:if='{{canIUse}}' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>确认授权</button>
+    <!-- 版本太低，无法进行正常的授权 -->
+    <view wx:else>请升级微信版本</view>
+  </view>
+</view>

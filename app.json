@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "components/good-list/good-list",
+    "pages/mixture/mixture",
+    "pages/authorization/authorization",
+    "pages/help/help",
+    "pages/me/me",
+    "pages/feedback/feedback",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/edit-address/edit-address",
+    "pages/my-address/my-address",
+    "pages/order-confirm/order-confirm",
+    "pages/my-order/my-order",
+    "pages/search-result/search-result",
+    "pages/cyb/cyb",
+
+
+
+    
+    
+    
+    "pages/good-detail/good-detail",
+    "pages/my-collect/my-collect",
+    "pages/logs/logs"
+  ],"tabBar": {
+    "selectedColor": "#ff9500",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-selected.png"
+      },
+      {
+        "pagePath": "pages/mixture/mixture",
+        "text": "杂烩",
+        "iconPath": "images/concern.png",
+        "selectedIconPath": "images/concern-selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me-selected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

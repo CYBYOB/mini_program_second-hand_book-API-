@@ -1,0 +1,45 @@
+/* pages/my-address/my-address.wxss */
+
+/* 收货地址 */
+.address-item {
+  display: flex;
+  align-items: center;
+  padding: 25rpx;
+}
+.address-item > .index {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 70rpx;
+  background-color: #c6c6c6;
+}
+.address-item > .mid-info {
+  margin-left: 25rpx;
+  /* 文字可能溢出，溢出就用 省略号 ... 代替,目前实现不了，暂时扩展开，效果也不错 */
+  flex: 1;
+}
+.mid-info  .name {
+  margin-right: 30rpx;
+}
+.mid-info > .address {
+  margin-top: 20rpx;
+}
+.address-item > .edit {
+  padding: 0 0 0 25rpx;
+  margin-left: auto;
+  color: #999;
+}
+/* 其实可以是在 add-btn中进行 margin设置，这里想体验一下 ntn-child 的用法 */
+/* .address-list > .address-item:last-child {
+  margin-bottom: 50rpx;
+} */
+
+/* 新增按钮 */
+.add-btn {
+  margin-top: 50rpx;
+  color: #FB4E4E;
+  background-color: #fff;
+}

@@ -1,0 +1,47 @@
+<!--pages/good-detail/good-detail.wxml-->
+<view>
+  <!-- 顶部的商品信息栏 -->
+  <view class='top-good-info border-bottom'>
+    <image class='good-img' src="{{'https://www.520cyb.cn/mini/book_shop/good/' + good.src}}"></image>
+    <image class='collect' src='../../images/good-detail/collect.png' bindtap='collectCurrentGood'></image>
+    <!-- “主体内容”，左右各留出 25rpx 留白 -->
+    <view class='main-content'>
+      <view class='price-sale'>
+        <text class='now-price main-color-text'>￥{{good.now_price}}</text>
+        <text class='pre-price small-font'>原价<text class='line-through'>￥{{good.pre_price}}</text></text>
+        <text class='sale-num small-font'>网销{{good.sale_num}}本</text>
+      </view>
+      <view class='name'>{{good.name}}</view>
+    </view>
+  </view>
+
+  <!-- 下面的“主体部分” -->
+  <view class='main-content'>
+    <!-- 小公告 -->
+    <view class='tip border-all'>
+      公告：昨日在耳商场小程序所有书籍均有由老综二楼昨日书屋发货，新旧程度略有不同。若有特殊要求， 请扫下后备注或私发客服，谢谢理解。
+    </view>
+
+    <!-- 看看其他 -->
+    <view class='view-other'>
+      <text class='line border-top'></text>
+      <text class='text-other'>看看其他</text>
+      <text class='line border-top'></text>
+    </view>
+  </view>
+
+  <!-- 其他 -->
+  <view class='other'>
+    <!--myRecommendList 千人千面，推送他感兴趣的 -->
+    <good-list goodList='{{myRecommendList}}'>
+    </good-list>
+  </view>
+
+  <!-- 微信、电话的 悬浮图标 -->
+  <view class='phone-wechat border-all'>
+    <image class='phone border-right' src='../../images/good-detail/phone.png' bindtap='makePhoneCall'></image>
+    <image class='wechat' src='../../images/good-detail/wechat.png' bindtap='getWechat'></image>
+  </view>
+  <!-- 底部购买按钮 -->
+  <button class='buy-btn' bindtap='buyCurrentGood'>立即购买</button>
+</view>

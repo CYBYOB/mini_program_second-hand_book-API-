@@ -1,0 +1,74 @@
+<!--pages/order-confirm/order-confirm.wxml-->
+<view>
+  <!-- 顶部的收货相关信息 -->
+  <view class='top-info border-bottom'>
+    <image class='address-icon' src='../../images/order-confirm/address.png'></image>
+    <view class='delivery-info'>
+      <view class='name'>收货人：
+        <input class='border-all' value='{{deliveryInfo.name}}' bindinput='inputName'></input>
+      </view>
+      <view class='phone'>收货电话：
+        <input class='border-all' value='{{deliveryInfo.phone}}' type='number' bindinput='inputPhone'></input>
+      </view>
+      <view class='address'>收货地址：
+        <input class='border-all' value='{{deliveryInfo.address}}' bindinput='inputAddress'></input>
+      </view>
+      <!-- 到店自取 tip -->
+      <view class='tip main-color-text'>（可到店自取，有精美礼品相送）</view>
+    </view>
+  </view>
+
+  <!-- 底部的订单信息 -->
+  <view class='order-info main-content'>
+    <!-- 所选购的商品信息 -->
+    <view class='good-list'>
+      <block wx:for='{{goodList}}' wx:for-index="index">
+        <view class='good-item border-bottom'>
+          <view class='good-info border-bottom'>
+            <image src="{{'https://www.520cyb.cn/mini/book_shop/good/'+item.src}}"></image>
+            <view class='right-info'>
+              <view class='name'>{{item.name}}</view>
+              <view class='bottom-info'>
+                <text>￥{{item.now_price}}</text>
+                <text>X{{item.good_num}}</text>
+              </view>
+            </view>
+          </view>
+          <view class='num-of-buy'>
+            <view>购买数量</view>
+            <view class='num'>
+              <text class='minus' data-index='{{index}}' bindtap='clickMinus'>-</text>
+              <text>{{item.good_num}}</text>
+              <text class='add' data-index='{{index}}' bindtap='clickAdd'>+</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 配送方式 -->
+    <view class='way-of-delivery border-bottom'>
+      <text>配送方式</text>
+      <view class='delivery-self fr'>
+        <text style="color:{{otherInfo.deliveryWay=='no_self'? '#ff9500':''}}" bindtap='clickNoSelf'>配送 </text>
+        |
+        <text style="color:{{otherInfo.deliveryWay=='self'? '#ff9500':''}}" bindtap='clickSelf'> 到店自取</text>
+      </view>
+    </view>
+
+    <!-- 买家留言 -->
+    <view class='buyer-msg border-bottom'>
+      <text>买家留言：</text>
+      <input placeholder='选填' bindinput='inputMessage'></input>
+    </view>
+
+    <!-- 直接不用小计了，直接合计 -->
+    <view class='total'>
+      <text>合计：</text>
+      <text class='main-color-text'>￥{{otherInfo.totalPrice}}</text>
+      <!-- 为了语义化，应该使用 button ，而不是 wiew ,虽然 view 写起样式来简单 -->
+      <button class='commit-btn' bindtap='commitOrder'>提交订单</button>
+    </view>
+    <!-- 底部购买信息 结束 -->
+  </view>
+</view>

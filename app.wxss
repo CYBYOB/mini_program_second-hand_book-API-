@@ -1,0 +1,55 @@
+/**app.wxss**/
+
+/* 主体内容,左右各留出 25rpx的空白 */
+.main-content {
+  margin: 0 25rpx;
+}
+/* 小间隔（“粗的分割线”） */
+.gap {
+  height: 20rpx;
+  background-color: #eee;
+
+}
+/* 各种边框 border */
+.border-all {
+  border: 3rpx #eee solid;
+}
+.border-top {
+  border-top: 3rpx #eee solid;
+}
+.border-bottom {
+  border-bottom: 3rpx #eee solid;
+}
+.border-left {
+  border-left: 3rpx #eee solid;
+}
+.border-right {
+  border-right: 3rpx #eee solid;
+}
+
+/* 浮动相关 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* 清除两边的浮动 */
+.clear {
+  clear: both;
+}
+
+/* 主体颜色 #ff9500 ，背景色 和 字体色 */
+.main-color-bg {
+  background-color: #ff9500;
+}
+.main-color-text {
+  color: #ff9500;
+}
+
+/* 小字体，且字体颜色为 #666 */
+.small-font {
+  font-size: 27rpx;
+  font-weight: 500;
+  color: #666;
+}
